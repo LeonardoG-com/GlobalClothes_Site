@@ -1,0 +1,76 @@
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Clothes</title>
+    <link rel="stylesheet" href="/PAP/css/admin_page.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"charset="utf-8">
+    </script>
+  </head>
+  
+  <body>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+      <div class="close-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="menu">
+        <div class="item">
+          <a href="/PAP/admin/inicio.php"
+            ><i class="fas fa-desktop"></i>Inicio</a
+          >
+        </div>
+
+        <div class="item">
+          <a href=" User.php"
+            ><i class="fas fa-users"></i>Visualizar tabela dos Users</a
+          >
+        </div>
+
+        <div class="item">
+          <a href="roupas.php"
+            ><i class="fas fa-shirt"></i>Alterar tabela das Roupas</a
+          >
+        </div>
+
+         <div class="item">
+          <a href="CandEquipas.php"
+            ><i class="fas fa-users"></i>Tabela dos Pedidos para equipa</a>
+        </div> 
+
+        <div class="item">
+          <a href="/PAP/admin/logout.php">
+            <i class="fa-solid fa-right-from-bracket"></i>Log out</a>
+        </div>
+      </div>
+    </div>
+    <section class=""></section>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // jquery para alternar os submenus
+        $(".sub-btn").click(function () {
+          $(this).next(".sub-menu").slideToggle();
+          $(this).find(".dropdown").toggleClass("rotate");
+        });
+
+        //jquery para expandir e fechar o sidebar
+        $(".menu-btn").click(function () {
+          $(".side-bar").addClass("active");
+        });
+
+        $(".close-btn").click(function () {
+          $(".side-bar").removeClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

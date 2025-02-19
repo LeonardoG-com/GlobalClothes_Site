@@ -1,0 +1,40 @@
+.slides {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mySlides {
+     display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  }
+  
+  .mySlides img {
+  /* define o tamanho máximo da imagem para o tamanho do elemento pai */
+    height: auto;
+    margin: 0 10px; /* adiciona uma margem horizontal para separar as imagens */
+  }
+
+  .image-container {
+    width: 50%; /* Divide a largura igualmente entre as duas imagens */
+    float: left; /* Faz com que os contêineres fiquem um ao lado do outro */
+    box-sizing: border-box; /* inclui a largura da borda e o padding na largura total */
+    padding: 20px; /* Adiciona um preenchimento para separar as imagens */
+  }
+  .image-container img {
+    width: 100%; /* Faz com que a imagem preencha todo o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* remove o espaço extra abaixo da imagem */
+    border-radius: 3%;
+
+  }
+  .image-container {
+      height: 300px; /* Define a altura fixa */
+      padding-top: 50px;
+      
+    }
+    
+
+ 
+  

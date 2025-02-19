@@ -1,0 +1,61 @@
+perguntar ao gabi sobre a tabela tabela_roupa
+
+como associar cargo
+
+isnerir corees
+
+<div class="col-md-3">
+                <label  class="form-label">Cor:</label><br>
+                <?php
+                     $query = "SELECT * FROM cor";
+                     $result = mysqli_query($con, $query);
+
+               
+                     while ($rowcor = mysqli_fetch_assoc($result)) {
+                        $id_cor = $rowcor['id_cor'];
+                        $cor = $rowcor['nome_cor'];
+                        echo '<div class="form-check form-check-inline">';
+                        echo '<input class="form-check-input" type="checkbox" name="cores[]" value="' . $id_cor . '">';
+                        echo "<label class='form-check-label' for='tamanho-$id_cor'>$cor</label>";
+                        echo '</div>';
+                    }
+                    
+                
+                ?>
+                 </div>  
+
+
+video frontend 40:05
+https://www.youtube.com/watch?v=P8YuWEkTeuE&list=PL9bD98LkBR7P8MYh0RzNSHgeVNTA8g0nB
+
+meter setas animadas
+
+
+
+adicionar campo de data de lançamento do produto
+
+alterar campo "localidade"
+
+
+   <?php
+        if (isset($error)) {
+            echo '<span>' . $error . '</span>';
+        }
+        ?>
+
+
+        SELECT tr.id_roupa, t.id_tamanhos, tr.stock FROM tamanhos_roupa AS tr INNER JOIN tamanhos AS t ON tr.id_tamanhos = t.id_tamanhos WHERE tr.id_roupa
+
+
+
+         <td> <?php
+    $roupa_id = $row['id_roupa'];
+    $query_tamanhos = "SELECT t.tamanhos
+                       FROM tamanhos_roupa tr
+                       INNER JOIN tamanhos t ON tr.id_tamanhos = t.id_tamanhos
+                       WHERE tr.id_roupa = $roupa_id";
+    $result_tamanhos = mysqli_query($con, $query_tamanhos);
+    while ($row_tamanhos = mysqli_fetch_assoc($result_tamanhos)) {
+        echo $row_tamanhos['tamanhos'] . ' ';
+    }
+    ?></td>
