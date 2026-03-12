@@ -15,7 +15,7 @@ include('../conDB/con_db.php');
 if (isset($_POST['id_Cand'])) {
     $id_Cand = $_POST['id_Cand'];
 
-    // Obter o caminho do PDF e o ID da imagem associada a partir do banco de dados
+    // Obter o caminho do PDF e o ID da imagem associada a partir da base de dados
     $query = "SELECT i.imagens, je.id_imagem FROM juntar_equipa AS je
               INNER JOIN imagens AS i ON je.id_imagem = i.id_imagens
               WHERE je.id_user = $id_Cand";
@@ -26,9 +26,9 @@ if (isset($_POST['id_Cand'])) {
         $caminho_pdf = $_SERVER['DOCUMENT_ROOT'] . $row['imagens'];
         $id_imagem = $row['id_imagem'];
 
-        // Verificar se o arquivo PDF existe
+        // Verificar se o PDF existe
         if (file_exists($caminho_pdf)) {
-            // Excluir o arquivo PDF
+            // Excluir o PDF
             unlink($caminho_pdf);
         }
 
@@ -50,10 +50,6 @@ if (isset($_POST['id_Cand'])) {
     }
 }
 ?>
-
-
-
-
-
+    
 </body>
 </html>
